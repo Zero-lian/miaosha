@@ -11,7 +11,7 @@ public abstract class BasePrefix implements KeyPrefix {
 
     private String prefix;
 
-    public BasePrefix(String prefix) {
+    public BasePrefix(String prefix) {//0代表永不过期
         this(0,prefix);
     }
 

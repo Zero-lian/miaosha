@@ -1,7 +1,7 @@
 package github.zero.miaosha.domain;
 
 /**
- * @Desciption
+ * @Desciption  MD5加密工具类
  * @Author yucanlian
  * @Date 2020-11-11-9:47
  */
