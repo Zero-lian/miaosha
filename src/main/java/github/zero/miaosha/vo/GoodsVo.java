@@ -3,6 +3,7 @@ package github.zero.miaosha.vo;
 import github.zero.miaosha.domain.Goods;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.util.Date;
 
@@ -13,6 +14,7 @@ import java.util.Date;
  */
 @Setter
 @Getter
+@ToString
 public class GoodsVo extends Goods {
     private Double miaoshaPrice;
     private Integer stockCount;
