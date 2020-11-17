@@ -1,27 +1,18 @@
 package github.zero.miaosha.domain;
 
-/**
- * @Desciption  MD5加密工具类
- * @Author yucanlian
- * @Date 2020-11-11-9:47
- */
 public class User {
-    private int id;
-    private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+	private int id;
+	private String name;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 }

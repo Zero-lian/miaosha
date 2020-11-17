@@ -1,23 +1,36 @@
 package github.zero.miaosha.vo;
 
-import github.zero.miaosha.domain.Goods;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
 import java.util.Date;
 
-/**
- * @Desciption
- * @Author yucanlian
- * @Date 2020-11-14-15:21
- */
-@Setter
-@Getter
-@ToString
-public class GoodsVo extends Goods {
-    private Double miaoshaPrice;
-    private Integer stockCount;
-    private Date startDate;
-    private Date endDate;
+import github.zero.miaosha.domain.Goods;
+
+public class GoodsVo extends Goods{
+	private Double miaoshaPrice;
+	private Integer stockCount;
+	private Date startDate;
+	private Date endDate;
+	public Integer getStockCount() {
+		return stockCount;
+	}
+	public void setStockCount(Integer stockCount) {
+		this.stockCount = stockCount;
+	}
+	public Date getStartDate() {
+		return startDate;
+	}
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+	public Date getEndDate() {
+		return endDate;
+	}
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
+	}
+	public Double getMiaoshaPrice() {
+		return miaoshaPrice;
+	}
+	public void setMiaoshaPrice(Double miaoshaPrice) {
+		this.miaoshaPrice = miaoshaPrice;
+	}
 }

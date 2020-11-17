@@ -1,33 +1,27 @@
 package github.zero.miaosha.redis;
 
-/**
- * @Desciption
- * @Author yucanlian
- * @Date 2020-11-11-22:55
- */
-public abstract class BasePrefix implements KeyPrefix {
+public abstract class BasePrefix implements KeyPrefix{
+	
+	private int expireSeconds;
+	
+	private String prefix;
+	
+	public BasePrefix(String prefix) {//0代表永不过期
+		this(0, prefix);
+	}
+	
+	public BasePrefix( int expireSeconds, String prefix) {
+		this.expireSeconds = expireSeconds;
+		this.prefix = prefix;
+	}
+	
+	public int expireSeconds() {//默认0代表永不过期
+		return expireSeconds;
+	}
 
-    private int expireSeconds;
+	public String getPrefix() {
+		String className = getClass().getSimpleName();
+		return className+":" + prefix;
+	}
 
-    private String prefix;
-
-    public BasePrefix(String prefix) {//0代表永不过期
-        this(0,prefix);
-    }
-
-    public BasePrefix(int expireSeconds, String prefix) {
-        this.expireSeconds = expireSeconds;
-        this.prefix = prefix;
-    }
-
-    @Override
-    public int expireSeconds() {//默认0代表永不过期
-        return expireSeconds;
-    }
-
-    @Override
-    public String getPrefix() {
-        String classpath = getClass().getSimpleName();
-        return classpath+":"+prefix;
-    }
 }

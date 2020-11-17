@@ -1,18 +1,32 @@
 package github.zero.miaosha.domain;
 
-import lombok.Getter;
-import lombok.Setter;
-
-/**
- * @Desciption
- * @Author yucanlian
- * @Date 2020-11-14-15:15
- */
-@Setter
-@Getter
 public class MiaoshaOrder {
-    private Long id;
-    private Long userId;
-    private Long  orderId;
-    private Long goodsId;
+	private Long id;
+	private Long userId;
+	private Long  orderId;
+	private Long goodsId;
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public Long getUserId() {
+		return userId;
+	}
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+	public Long getOrderId() {
+		return orderId;
+	}
+	public void setOrderId(Long orderId) {
+		this.orderId = orderId;
+	}
+	public Long getGoodsId() {
+		return goodsId;
+	}
+	public void setGoodsId(Long goodsId) {
+		this.goodsId = goodsId;
+	}
 }

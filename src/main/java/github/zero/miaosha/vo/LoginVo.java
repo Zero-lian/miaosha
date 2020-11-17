@@ -1,18 +1,35 @@
 package github.zero.miaosha.vo;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import javax.validation.constraints.NotNull;
 
-/**
- * @Desciption
- * @Author yucanlian
- * @Date 2020-11-12-21:14
- */
-@Getter
-@Setter
-@ToString
+import org.hibernate.validator.constraints.Length;
+
+import github.zero.miaosha.validator.IsMobile;
+
 public class LoginVo {
-    private String mobile;
-    private String password;
+	
+	@NotNull
+	@IsMobile
+	private String mobile;
+	
+	@NotNull
+	@Length(min=32)
+	private String password;
+	
+	public String getMobile() {
+		return mobile;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	@Override
+	public String toString() {
+		return "LoginVo [mobile=" + mobile + ", password=" + password + "]";
+	}
 }
